@@ -22,6 +22,7 @@ let routes = [
 
 //Register Routes
 const router = new VueRouter({
+    mode: 'history',
     routes
 })
 

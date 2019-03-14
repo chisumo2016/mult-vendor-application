@@ -51816,6 +51816,7 @@ var routes = [{
 }]; //Register Routes
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  mode: 'history',
   routes: routes
 });
 /**
