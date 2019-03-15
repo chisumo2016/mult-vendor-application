@@ -7,7 +7,8 @@
                         <h3 class="card-title">Display All Users</h3>
 
                         <div class="card-tools">
-                             <button class="btn btn-success"  data-toggle="modal" data-target="#addNew">Add New User <i class="fas fa-user-plus fa-fw"></i></button>
+                             <button class="btn btn-success"  @click="newModal">Add New User <i class="fas fa-user-plus fa-fw"></i></button>
+                             <!--<button class="btn btn-success"  data-toggle="modal" data-target="#addNew">Add New User <i class="fas fa-user-plus fa-fw"></i></button>-->
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -31,7 +32,7 @@
 
                                 <td>
 
-                                    <a href="">
+                                    <a href="#" @click="editModal(user)">
                                         <i class="fa fa-edit blue"></i>
                                     </a>
                                     /
@@ -115,7 +116,7 @@
         </div>
 
     </div>
-
+    <!--data-toggle="modal" data-target="#addNew"-->
 
 </template>
 
@@ -139,6 +140,20 @@
         },
 
         methods:{
+            editModal(user){
+
+                this.form.reset();
+
+                $('#addNew').modal('show');
+                this.form.fill(user)
+            },
+            newModal(){
+
+                this.form.reset();
+
+                $('#addNew').modal('show');
+            },
+
             deleteUser(id){
 
                 swal.fire({
