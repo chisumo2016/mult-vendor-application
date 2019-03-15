@@ -19,6 +19,18 @@ Vue.component(AlertError.name, AlertError)
 //Global Progress Bar
 import VueProgressBar from 'vue-progressbar';
 
+// ES6 Modules or TypeScript  sweetalert2
+import swal from 'sweetalert2'
+
+
+
+const toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+});
+
 //Vue Route
 import VueRouter from 'vue-router'
 
@@ -58,6 +70,12 @@ Vue.use(VueProgressBar, {
     failedColor: 'red',  //red
     height: '8px'
 })
+
+//Toastr
+window.toast = toast;
+
+//SweetAlert2
+window.swal = swal;
 
 
 
