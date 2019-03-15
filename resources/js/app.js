@@ -12,11 +12,14 @@ import  moment  from 'moment';
 //Error Handling Packages
 import { Form, HasError, AlertError } from 'vform';
 window.Form  = Form;
-//Register Global
+//Register Global Error
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 
+//Global Progress Bar
+import VueProgressBar from 'vue-progressbar';
 
+//Vue Route
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -46,6 +49,15 @@ Vue.filter('myDate', function (created) {
 
     return moment(created).format('MMMM Do YYYY');
 });
+
+
+//Global Progress Bar
+
+Vue.use(VueProgressBar, {
+    color: 'rgb(143,255, 199)',  // 'rgb(143,255, 199),
+    failedColor: 'red',  //red
+    height: '8px'
+})
 
 
 
