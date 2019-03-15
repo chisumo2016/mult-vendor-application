@@ -78,6 +78,13 @@ window.toast = toast;
 window.swal = swal;
 
 
+//Custom Event to Send HTTP Request / fire to create a custome events   window.Fire = new Vue();
+
+let Fire = new Vue();
+
+window.Fire  = Fire;
+
+
 
 /**
  * The following block of code may be used to automatically register your

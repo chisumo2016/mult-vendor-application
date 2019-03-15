@@ -149,6 +149,8 @@
 
                 this.$Progress.start();
                 this.form.post('api/user');
+                 //Event
+                Fire.$emit('AfterCreate');
 
                 $('#addNew').modal('hide');
 
@@ -162,8 +164,13 @@
         },
         created() {
             this.loadUsers();
+
+            //Listen  Http Request
+            Fire.$on('AfterCreate',() => {
+                this.loadUsers();
+            });
             //Http Request
-            setInterval(()=> this.loadUsers(), 3000); //ES6
+           // setInterval(()=> this.loadUsers(), 3000); //ES6
             //setInterval(function (){this.loadUsers()}, 3000);
         }
     }
