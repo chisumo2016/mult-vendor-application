@@ -2026,18 +2026,32 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     createUser: function createUser() {
+      var _this2 = this;
+
       this.$Progress.start();
-      this.form.post('api/user');
-      $('#addNew').modal('hide');
-      toast.fire({
-        type: 'success',
-        title: 'User Created  successfully'
-      });
-      this.$Progress.finish();
+      this.form.post('api/user').then(function () {
+        //Event
+        Fire.$emit('AfterCreate');
+        $('#addNew').modal('hide');
+        toast.fire({
+          type: 'success',
+          title: 'User Created  successfully'
+        });
+
+        _this2.$Progress.finish();
+      }).catch(function () {});
     }
   },
   created: function created() {
-    this.loadUsers();
+    var _this3 = this;
+
+    this.loadUsers(); //Listen  Http Request
+
+    Fire.$on('AfterCreate', function () {
+      _this3.loadUsers();
+    }); //Http Request
+    // setInterval(()=> this.loadUsers(), 3000); //ES6
+    //setInterval(function (){this.loadUsers()}, 3000);
   }
 });
 
@@ -73722,7 +73736,10 @@ Vue.use(vue_progressbar__WEBPACK_IMPORTED_MODULE_2___default.a, {
 
 window.toast = toast; //SweetAlert2
 
-window.swal = sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a;
+window.swal = sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a; //Custom Event to Send HTTP Request / fire to create a custome events   window.Fire = new Vue();
+
+var Fire = new Vue();
+window.Fire = Fire;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
