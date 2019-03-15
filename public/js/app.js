@@ -38317,8 +38317,8 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.form.name,
-                              expression: "form.name"
+                              value: _vm.form.password,
+                              expression: "form.password"
                             }
                           ],
                           staticClass: "form-control",
@@ -38331,13 +38331,17 @@ var render = function() {
                             placeholder: "Password",
                             id: "password"
                           },
-                          domProps: { value: _vm.form.name },
+                          domProps: { value: _vm.form.password },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-                              _vm.$set(_vm.form, "name", $event.target.value)
+                              _vm.$set(
+                                _vm.form,
+                                "password",
+                                $event.target.value
+                              )
                             }
                           }
                         }),
@@ -38363,7 +38367,7 @@ var render = function() {
                             }
                           ],
                           staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("name") },
+                          class: { "is-invalid": _vm.form.errors.has("bio") },
                           attrs: {
                             type: "text",
                             name: "bio",
@@ -38409,7 +38413,7 @@ var render = function() {
                             },
                             attrs: {
                               type: "text",
-                              name: "bio",
+                              name: "type",
                               placeholder: "Type"
                             },
                             on: {
@@ -38585,7 +38589,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
         [_vm._v("Create User")]
       )
     ])

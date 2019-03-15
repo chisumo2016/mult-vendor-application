@@ -77,19 +77,19 @@
                             </div>
 
                             <div class="form-group">
-                                <input v-model="form.name"  type="password" name="password"  placeholder="Password" id="password"
+                                <input v-model="form.password"  type="password" name="password"  placeholder="Password" id="password"
                                        class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
                                 <has-error :form="form" field="password"></has-error>
                             </div>
 
                             <div class="form-group">
                             <textarea v-model="form.bio"  type="text" name="bio"  placeholder="Bio" id="bio"
-                                      class="form-control" :class="{ 'is-invalid': form.errors.has('name') }"></textarea>
+                                      class="form-control" :class="{ 'is-invalid': form.errors.has('bio') }"></textarea>
                                 <has-error :form="form" field="bio"></has-error>
                             </div>
 
                             <div class="form-group">
-                                <select v-model="form.type"  type="text" name="bio"  placeholder="Type"
+                                <select v-model="form.type"  type="text" name="type"  placeholder="Type"
                                         class="form-control" :class="{ 'is-invalid': form.errors.has(type) }">
 
                                     <option value="">Select User Role</option>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Create User</button>
+                            <button type="submit" class="btn btn-primary">Create User</button>
                         </div>
                     </form>
                 </div>
