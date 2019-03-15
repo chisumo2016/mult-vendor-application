@@ -146,7 +146,7 @@
             },
 
             createUser(){
-                
+
                 this.$Progress.start();
                 this.form.post('api/user');
 
@@ -161,7 +161,10 @@
             }
         },
         created() {
-            this.loadUsers()
+            this.loadUsers();
+            //Http Request
+            setInterval(()=> this.loadUsers(), 3000); //ES6
+            //setInterval(function (){this.loadUsers()}, 3000);
         }
     }
 </script>
