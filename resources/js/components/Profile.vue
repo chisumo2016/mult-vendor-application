@@ -75,10 +75,10 @@
                                     <form class="form-horizontal">
 
                                         <div class="form-group">
-                                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                            <label for="inputName"    class="col-sm-2 control-label">Name</label>
 
                                             <div class="col-sm-12">
-                                                <input type=""  class="form-control" id="inputName" placeholder="Name" >
+                                                <input type=""  v-model="form.name"  class="form-control"  :class="{ 'is-invalid': form.errors.has('name') }" id="inputName" placeholder="Name" >
                                                 <has-error :form="form" field="name"></has-error>
                                             </div>
                                         </div>
@@ -87,7 +87,7 @@
                                             <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                                             <div class="col-sm-12">
-                                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                                <input type="email" v-model="form.email"  :class="{ 'is-invalid': form.errors.has('email') }"   class="form-control" id="inputEmail" placeholder="Email">
                                                 <has-error :form="form" field="email"></has-error>
                                             </div>
                                         </div>
@@ -97,7 +97,7 @@
                                             <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
 
                                             <div class="col-sm-12">
-                                                <textarea   class="form-control" id="inputExperience" placeholder="Experience" ></textarea>
+                                                <textarea    v-model="form.bio"  class="form-control"  :class="{ 'is-invalid': form.errors.has('bio') }"   id="inputExperience" placeholder="Experience" ></textarea>
                                                 <has-error :form="form" field="bio"></has-error>
                                             </div>
                                         </div>
@@ -115,11 +115,11 @@
 
                                             <div class="col-sm-12">
                                                 <input type="password"
-
+                                                       v-model="form.password"
                                                        class="form-control"
                                                        id="password"
                                                        placeholder="Passport"
-
+                                                       :class="{ 'is-invalid': form.errors.has('password') }"
                                                 >
                                                 <has-error :form="form" field="password"></has-error>
                                             </div>
@@ -159,8 +159,27 @@
 
 <script>
     export default {
+        data(){
+            return{
+                form: new Form({
+                    id: '',
+                    name : '',
+                    email: '',
+                    password: '',
+                    type: '',
+                    bio: '',
+                    photo: ''
+                })
+            }
+        },
         mounted() {
             console.log('Component mounted.')
+        },
+
+        created(){
+            //http request to server
+            axios.get("api/profile")
+                .then(({ data})   => (this.form.fill(data)));
         }
     }
 </script>
