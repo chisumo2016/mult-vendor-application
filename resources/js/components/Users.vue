@@ -133,6 +133,7 @@
                 users:{},
                 // Create a new form instance
                 form: new Form({
+                    id: '',
                     name : '',
                     email: '',
                     password: '',
@@ -144,8 +145,32 @@
         },
 
         methods:{
+
             updateUser(){
-                console.log('edit');
+                this.$Progress.start();
+
+                this.form.put('api/user/'+this.form.id)  //come from updUser
+                .then(() => {
+                    //success
+                    $('#addNew').modal('show');
+                    Swal.fire(
+                        'Update!',
+                        'Information has been updated.',
+                        'success'
+                    )
+
+                    this.$Progress.finish();
+
+                    //Event
+                    Fire.$emit('AfterCreate');
+
+                })
+                .catch(()=>{
+                    this.$Progress.fail();
+
+
+                    })
+                //console.log('edit');
             },
             editModal(user){
                 this.editmode = true;
