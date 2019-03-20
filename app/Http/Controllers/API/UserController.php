@@ -125,6 +125,7 @@ class UserController extends Controller
 
         ]);
 
+        //Photo in user profile
         $currentPhoto = $user->photo;
 
         if ($request->photo  !== $currentPhoto){
@@ -134,6 +135,14 @@ class UserController extends Controller
             Image::make($request->photo)->save(public_path('image/profile/').$name);
 
             $request->merge(['photo' => $name]);
+
+            //To delete the old image
+            $userPhoto = public_path('image/profile/').$currentPhoto;
+            if(file_exists($userPhoto)){
+
+                //delete
+                @unlink($userPhoto);
+            }
         }
 
         //Hash Password
