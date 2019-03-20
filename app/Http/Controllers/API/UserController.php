@@ -136,6 +136,12 @@ class UserController extends Controller
             $request->merge(['photo' => $name]);
         }
 
+        //Hash Password
+
+        if (!empty($request->password)){
+            $request->merge(['password' =>  Hash::make($request['password'])]);
+        }
+
 
         //Save
 
