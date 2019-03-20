@@ -176,16 +176,17 @@
         methods:{
             //send to the sender
             updateInfo(){
+                this.$progess.start();
 
                 this.form.put('api/profile/')
 
 
                 //this.form.put('api/user/'+this.form.id)  //come from updUser
                    .then(() =>{
-
+                       this.$progess.finish();
                    })
                    .catch(() =>{
-
+                       this.$progess.fail();
                    })
             },
             updateProfile(e) { // e   contain an event of a file
@@ -194,16 +195,26 @@
                 let file = e.target.files[0];
 
                 //console.log(file); //thing we can access
-                let reader = new FileReader();
+                //Check the file size
+                if(file['size']  <  2111775){
 
-                reader.onloadend = (file) => {
-                    //console.log('RESULT', reader.result)
-                    //assign to an image
-                    this. form .photo = reader.result;
+                    let reader = new FileReader();
+
+                    reader.onloadend = (file) => {
+                        //console.log('RESULT', reader.result)
+                        //assign to an image
+                        this. form .photo = reader.result;
+                    }
+
+                    // convert into base64
+                    reader.readAsDataURL(file);
+                }else{
+                    Swal({
+                            type: 'error',
+                            title:'Ooops .....',
+                            text: 'You are uploading a larage file',
+                        })
                 }
-
-                // convert into base64
-                reader.readAsDataURL(file);
 
             }
 

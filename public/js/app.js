@@ -2057,35 +2057,51 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     //send to the sender
     updateInfo: function updateInfo() {
+      var _this = this;
+
+      this.$progess.start();
       this.form.put('api/profile/') //this.form.put('api/user/'+this.form.id)  //come from updUser
-      .then(function () {}).catch(function () {});
+      .then(function () {
+        _this.$progess.finish();
+      }).catch(function () {
+        _this.$progess.fail();
+      });
     },
     updateProfile: function updateProfile(e) {
-      var _this = this;
+      var _this2 = this;
 
       // e   contain an event of a file
       //console.log('Uploading');
       var file = e.target.files[0]; //console.log(file); //thing we can access
+      //Check the file size
 
-      var reader = new FileReader();
+      if (file['size'] < 2111775) {
+        var reader = new FileReader();
 
-      reader.onloadend = function (file) {
-        //console.log('RESULT', reader.result)
-        //assign to an image
-        _this.form.photo = reader.result;
-      }; // convert into base64
+        reader.onloadend = function (file) {
+          //console.log('RESULT', reader.result)
+          //assign to an image
+          _this2.form.photo = reader.result;
+        }; // convert into base64
 
 
-      reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
+      } else {
+        Swal({
+          type: 'error',
+          title: 'Ooops .....',
+          text: 'You are uploading a larage file'
+        });
+      }
     }
   },
   created: function created() {
-    var _this2 = this;
+    var _this3 = this;
 
     //http request to server
     axios.get("api/profile").then(function (_ref) {
       var data = _ref.data;
-      return _this2.form.fill(data);
+      return _this3.form.fill(data);
     });
   }
 });

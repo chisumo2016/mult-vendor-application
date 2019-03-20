@@ -124,7 +124,7 @@ class UserController extends Controller
             Image::make($request->photo)->save(public_path('image/profile/').$name);
         }
 
-        return $request->photo;
+       // return $request->photo;
 
         //return ['message' => 'Successs'];
     }
