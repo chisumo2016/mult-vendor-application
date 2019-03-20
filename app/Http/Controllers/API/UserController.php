@@ -111,4 +111,13 @@ class UserController extends Controller
         return auth('api')->user();
         //return Auth::user();
     }
+
+    public  function  updateProfile(Request $request)
+    {
+        $user =  auth('api')->user();
+
+        return $request->photo;
+
+        //return ['message' => 'Successs'];
+    }
 }

@@ -128,12 +128,9 @@
 
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-12">
-                                                <button type="submit" class="btn btn-success">Update</button>
+                                                <button type="submit" class="btn btn-success" @click.prevent="updateInfo">Update</button>
                                             </div>
                                         </div>
-
-
-
 
 
                                     </form>
@@ -177,20 +174,35 @@
         },
 
         methods:{
-            updateProfile(e) { //containe
+            //send to the sender
+            updateInfo(){
+
+                this.form.put('api/profile/')
+
+
+                //this.form.put('api/user/'+this.form.id)  //come from updUser
+                   .then(() =>{
+
+                   })
+                   .catch(() =>{
+
+                   })
+            },
+            updateProfile(e) { // e   contain an event of a file
                 //console.log('Uploading');
 
                 let file = e.target.files[0];
 
-                //console.log(file);
+                //console.log(file); //thing we can access
                 let reader = new FileReader();
 
-                reader.onloadend = (file)  =>{
+                reader.onloadend = (file) => {
                     //console.log('RESULT', reader.result)
+                    //assign to an image
                     this. form .photo = reader.result;
                 }
 
-
+                // convert into base64
                 reader.readAsDataURL(file);
 
             }

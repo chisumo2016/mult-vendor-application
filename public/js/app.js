@@ -2037,9 +2037,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2058,19 +2055,26 @@ __webpack_require__.r(__webpack_exports__);
     console.log('Component mounted.');
   },
   methods: {
+    //send to the sender
+    updateInfo: function updateInfo() {
+      this.form.put('api/profile/') //this.form.put('api/user/'+this.form.id)  //come from updUser
+      .then(function () {}).catch(function () {});
+    },
     updateProfile: function updateProfile(e) {
       var _this = this;
 
-      //containe
+      // e   contain an event of a file
       //console.log('Uploading');
-      var file = e.target.files[0]; //console.log(file);
+      var file = e.target.files[0]; //console.log(file); //thing we can access
 
       var reader = new FileReader();
 
       reader.onloadend = function (file) {
         //console.log('RESULT', reader.result)
+        //assign to an image
         _this.form.photo = reader.result;
-      };
+      }; // convert into base64
+
 
       reader.readAsDataURL(file);
     }
@@ -60566,7 +60570,28 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _vm._m(3)
+                      _c("div", { staticClass: "form-group" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm-offset-2 col-sm-12" },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success",
+                                attrs: { type: "submit" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.updateInfo($event)
+                                  }
+                                }
+                              },
+                              [_vm._v("Update")]
+                            )
+                          ]
+                        )
+                      ])
                     ])
                   ]
                 )
@@ -60686,20 +60711,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "tab-pane", attrs: { id: "activity" } }, [
       _c("h3", { staticClass: "text-center" }, [
         _vm._v("Display User Activity")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "col-sm-offset-2 col-sm-12" }, [
-        _c(
-          "button",
-          { staticClass: "btn btn-success", attrs: { type: "submit" } },
-          [_vm._v("Update")]
-        )
       ])
     ])
   }
