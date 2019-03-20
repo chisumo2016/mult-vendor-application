@@ -40,6 +40,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('isAdmin');
         //Validation on the server
         $this->validate($request,[
             'name'      => 'required|string|max:191',
@@ -98,6 +99,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('isAdmin');
+
         $user  = User::findOrFail($id);
 
         $user->delete();
