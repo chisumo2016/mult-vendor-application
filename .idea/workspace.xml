@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="506ee2bc-2bdf-426d-a78b-3d341a99462e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553077899.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078045.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078088.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078105.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078417.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078972.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078976.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553078987.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553080140.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/image/profile/1553081251.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/components/Profile.vue" afterPath="$PROJECT_DIR$/resources/js/components/Profile.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="138" column="11" lean-forward="false" selection-start-line="138" selection-start-column="11" selection-end-line="144" selection-end-column="13" />
+            <state relative-caret-position="459">
+              <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
               <folding>
                 <element signature="e#44#57#0#PHP" expanded="true" />
               </folding>
@@ -67,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profile.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Profile.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/Profile.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="99" column="151" lean-forward="false" selection-start-line="99" selection-start-column="103" selection-end-line="99" selection-end-column="151" />
+            <state relative-caret-position="396">
+              <caret line="175" column="7" lean-forward="true" selection-start-line="175" selection-start-column="7" selection-end-line="178" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -122,8 +113,8 @@
         <option value="$PROJECT_DIR$/resources/js/components/Developer.vue" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/Profile.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/Profile.vue" />
       </list>
     </option>
   </component>
@@ -346,12 +337,12 @@
       <updated>1552559741837</updated>
       <workItem from="1552559743928" duration="32357000" />
       <workItem from="1552661765246" duration="26593000" />
-      <workItem from="1553073067090" duration="8672000" />
+      <workItem from="1553073067090" duration="9385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67622000" />
+    <option name="totallyTimeSpent" value="68335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -648,22 +639,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Profile.vue">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="99" column="151" lean-forward="false" selection-start-line="99" selection-start-column="103" selection-end-line="99" selection-end-column="151" />
+        <state relative-caret-position="459">
+          <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#44#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Profile.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="138" column="11" lean-forward="false" selection-start-line="138" selection-start-column="11" selection-end-line="144" selection-end-column="13" />
+        <state relative-caret-position="396">
+          <caret line="175" column="7" lean-forward="true" selection-start-line="175" selection-start-column="7" selection-end-line="178" selection-end-column="14" />
           <folding>
-            <element signature="e#44#57#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
