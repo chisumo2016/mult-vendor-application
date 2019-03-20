@@ -121,6 +121,12 @@ Vue.component(
 );
 
 
+Vue.component(
+    'not-found',
+    require('./components/NotFound.vue').default
+);
+
+
 
 
 
