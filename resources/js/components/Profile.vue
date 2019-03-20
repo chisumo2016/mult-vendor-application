@@ -175,7 +175,12 @@
 
         methods:{
             getProfilePhoto(){
-                return "image/profile/"+ this.form.photo;
+
+                //Refresh the photo  after upload
+                let photo = (this.form.photo.length  > 200) ? this.form.photo :  "image/profile/"+ this.form.photo;
+
+                return photo;
+                //return "image/profile/"+ this.form.photo;
             },
             //send to the sender
             updateInfo(){
@@ -185,7 +190,9 @@
 
 
                 //this.form.put('api/user/'+this.form.id)  //come from updUser
+
                    .then(() =>{
+                       Fire.$emit('AfterCreate');
                        this.$Progress.finish();
                    })
                    .catch(() =>{

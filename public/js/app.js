@@ -2056,7 +2056,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getProfilePhoto: function getProfilePhoto() {
-      return "image/profile/" + this.form.photo;
+      //Refresh the photo  after upload
+      var photo = this.form.photo.length > 200 ? this.form.photo : "image/profile/" + this.form.photo;
+      return photo; //return "image/profile/"+ this.form.photo;
     },
     //send to the sender
     updateInfo: function updateInfo() {
@@ -2065,6 +2067,8 @@ __webpack_require__.r(__webpack_exports__);
       this.$Progress.start();
       this.form.put('api/profile/') //this.form.put('api/user/'+this.form.id)  //come from updUser
       .then(function () {
+        Fire.$emit('AfterCreate');
+
         _this.$Progress.finish();
       }).catch(function () {
         _this.$Progress.fail();
