@@ -84,6 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </router-link>
                     </li>
 
+                    @can('isAdmin')
 
                     <li class="nav-item has-treeview ">
                         <a href="#" class="nav-link ">
@@ -108,21 +109,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </li>
 
-                           @can('isAdmin')
-                                <li class="nav-item">
-                                    <router-link to="/developer" class="nav-link">
-                                        <i class="nav-icon fas fa-cogs"></i>
-                                        <p>
-                                            Developer
-                                        </p>
-
-                                    </router-link>
-                                </li>
-
-                           @endcan
                         </ul>
-                    </li>
 
+                        <li class="nav-item">
+                            <router-link to="/developer" class="nav-link">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    Developer
+                                </p>
+
+                            </router-link>
+                        </li>
+
+                    @endcan
                            {{--Profile --}}
                     <li class="nav-item">
                         <router-link to="/profile" class="nav-link">
@@ -136,11 +135,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                        {{--Logout--}}
                     <li class="nav-item">
-
-
-
-
-                            {{--</p>--}}
 
                             <a class="nav-link" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
@@ -181,18 +175,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-wrapper -->
 
 
-
     <!-- Main Footer -->
     <footer class="main-footer">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
-            Anything you want
+            &copy; Chisumo
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2018 <a href="https://adminlte.io">Multi vendor Application - Laravel </a>.</strong> All rights reserved.
     </footer>
 </div>
 <!-- ./wrapper -->
+
+@auth
+<script>
+    window.user = @json(auth()->user())
+</script>
+@endauth
 
 <script src="/js/app.js"></script>
 </body>

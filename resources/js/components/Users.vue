@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-12">
+        <div class="row mt-5" v-if="$gate.isAdmin()">
+            <div class="col-md-12" >
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Display All Users</h3>
@@ -18,7 +18,7 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Tye</th>
+                                <th>Type</th>
                                 <th>Registered</th>
                                 <th>Modidy</th>
                             </tr>
@@ -224,7 +224,11 @@
                 })
             },
             loadUsers(){
-                axios.get("api/user").then(({ data}) => (this.users = data.data));
+                //ACL
+                if(this.$gate.isAdmin()){
+
+                    axios.get("api/user").then(({ data}) => (this.users = data.data));
+                }
             },
 
             createUser(){
@@ -257,7 +261,6 @@
         },
         created() {
             this.loadUsers();
-
             //Listen  Http Request
             Fire.$on('AfterCreate',() => {
                 this.loadUsers();

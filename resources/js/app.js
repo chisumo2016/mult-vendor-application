@@ -11,6 +11,7 @@ window.Vue = require('vue');
 import  moment  from 'moment';
 //Error Handling Packages
 import { Form, HasError, AlertError } from 'vform';
+;
 window.Form  = Form;
 //Register Global Error
 Vue.component(HasError.name, HasError)
@@ -22,6 +23,11 @@ import VueProgressBar from 'vue-progressbar';
 // ES6 Modules or TypeScript  sweetalert2
 import swal from 'sweetalert2'
 
+
+//ACL
+
+import Gate from "./Gate";
+Vue.prototype.$gate  = new Gate(window.user);
 
 
 const toast = swal.mixin({
