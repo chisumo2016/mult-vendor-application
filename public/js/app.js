@@ -2059,12 +2059,12 @@ __webpack_require__.r(__webpack_exports__);
     updateInfo: function updateInfo() {
       var _this = this;
 
-      this.$progess.start();
+      this.$Progress.start();
       this.form.put('api/profile/') //this.form.put('api/user/'+this.form.id)  //come from updUser
       .then(function () {
-        _this.$progess.finish();
+        _this.$Progress.finish();
       }).catch(function () {
-        _this.$progess.fail();
+        _this.$Progress.fail();
       });
     },
     updateProfile: function updateProfile(e) {

@@ -176,17 +176,17 @@
         methods:{
             //send to the sender
             updateInfo(){
-                this.$progess.start();
+                this.$Progress.start();
 
                 this.form.put('api/profile/')
 
 
                 //this.form.put('api/user/'+this.form.id)  //come from updUser
                    .then(() =>{
-                       this.$progess.finish();
+                       this.$Progress.finish();
                    })
                    .catch(() =>{
-                       this.$progess.fail();
+                       this.$Progress.fail();
                    })
             },
             updateProfile(e) { // e   contain an event of a file
