@@ -277,6 +277,20 @@
             }
         },
         created() {
+            //Listen an event
+
+            Fire.$on('searching',() =>{
+                let query = this.$parent.search;
+                //send an http event to the server
+                axios.get('api/findUser?q=' + query)
+                    .then((data) =>{
+                      this.users = data.data  //data comes from the server
+                    })
+                    .catch(() =>{
+
+
+                    })
+            })
             this.loadUsers();
             //Listen  Http Request
             Fire.$on('AfterCreate',() => {

@@ -142,5 +142,15 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',router
+    el: '#app',router,
+
+    data:{
+        search : ''
+    },
+
+    methods: {
+        searchit(){
+            Fire.$emit('searching'); // create customs event
+        }
+    }
 });

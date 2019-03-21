@@ -2388,6 +2388,14 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this6 = this;
 
+    //Listen an event
+    Fire.$on('searching', function () {
+      var query = _this6.$parent.search; //send an http event to the server
+
+      axios.get('api/findUser?q=' + query).then(function (data) {
+        _this6.users = data.data; //data comes from the server
+      }).catch(function () {});
+    });
     this.loadUsers(); //Listen  Http Request
 
     Fire.$on('AfterCreate', function () {
@@ -80292,7 +80300,15 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app',
-  router: router
+  router: router,
+  data: {
+    search: ''
+  },
+  methods: {
+    searchit: function searchit() {
+      Fire.$emit('searching'); // create customs event
+    }
+  }
 });
 
 /***/ }),
