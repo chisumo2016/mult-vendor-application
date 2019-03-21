@@ -151,6 +151,11 @@ const app = new Vue({
     methods: {
         searchit: _.debounce(() =>{
             Fire.$emit('searching'); // create customs event
-        }, 1000)
+        }, 1000),
+
+
+        printCopy() {
+            window.print();
+        }
     }
 });

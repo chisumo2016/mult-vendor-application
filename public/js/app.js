@@ -80307,7 +80307,10 @@ var app = new Vue({
   methods: {
     searchit: _.debounce(function () {
       Fire.$emit('searching'); // create customs event
-    }, 1000)
+    }, 1000),
+    printCopy: function printCopy() {
+      window.print();
+    }
   }
 });
 
