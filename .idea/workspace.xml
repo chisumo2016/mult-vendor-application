@@ -6,9 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/app.js" afterPath="$PROJECT_DIR$/resources/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/components/Users.vue" afterPath="$PROJECT_DIR$/resources/js/components/Users.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,7 +17,45 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="154" column="5" lean-forward="true" selection-start-line="150" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="34" column="87" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="87" />
+              <folding>
+                <marker date="1553169078115" expanded="true" signature="450:464" ph="..." />
+                <marker date="1553169078115" expanded="true" signature="2427:2447" ph="..." />
+                <marker date="1553169078115" expanded="true" signature="2506:2526" ph="..." />
+                <marker date="1553169078115" expanded="true" signature="5188:5205" ph="..." />
+                <marker date="1553169078115" expanded="true" signature="5531:5545" ph="..." />
+                <marker date="1553169078115" expanded="true" signature="5681:5698" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="183" column="5" lean-forward="true" selection-start-line="168" selection-start-column="3" selection-end-line="183" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,11 +92,11 @@
         <option value="$PROJECT_DIR$/resources/js/components/NotFound.vue" />
         <option value="$PROJECT_DIR$/resources/js/Gate.js" />
         <option value="$PROJECT_DIR$/resources/js/components/Profile.vue" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Users.vue" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
       </list>
     </option>
   </component>
@@ -455,17 +491,18 @@
       <workItem from="1552661765246" duration="26593000" />
       <workItem from="1553073067090" duration="19874000" />
       <workItem from="1553100725260" duration="5894000" />
-      <workItem from="1553160711115" duration="5803000" />
+      <workItem from="1553160711115" duration="6873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90521000" />
+    <option name="totallyTimeSpent" value="91591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="13" width="1379" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13570887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13570887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -517,12 +554,12 @@
         <state relative-caret-position="1638">
           <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <marker date="1553167263160" expanded="true" signature="450:464" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2433:2453" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2512:2532" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5194:5211" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5537:5551" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5687:5704" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="450:464" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2427:2447" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2506:2526" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5188:5205" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5531:5545" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5681:5698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -563,12 +600,12 @@
         <state relative-caret-position="3402">
           <caret line="189" column="5" lean-forward="true" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
           <folding>
-            <marker date="1553167263160" expanded="true" signature="450:464" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2433:2453" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2512:2532" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5194:5211" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5537:5551" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5687:5704" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="450:464" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2427:2447" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2506:2526" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5188:5205" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5531:5545" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5681:5698" ph="..." />
           </folding>
         </state>
       </provider>
@@ -851,31 +888,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="40" selection-end-column="18" />
+        <state relative-caret-position="450">
+          <caret line="34" column="87" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="87" />
           <folding>
-            <marker date="1553167263160" expanded="true" signature="450:464" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2433:2453" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="2512:2532" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5194:5211" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5537:5551" ph="..." />
-            <marker date="1553167263160" expanded="true" signature="5687:5704" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="450:464" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2427:2447" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="2506:2526" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5188:5205" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5531:5545" ph="..." />
+            <marker date="1553169078115" expanded="true" signature="5681:5698" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="180" column="5" lean-forward="true" selection-start-line="168" selection-start-column="4" selection-end-line="180" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="154" column="5" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+          <caret line="154" column="5" lean-forward="true" selection-start-line="150" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="183" column="5" lean-forward="true" selection-start-line="168" selection-start-column="3" selection-end-line="183" selection-end-column="5" />
           <folding />
         </state>
       </provider>
